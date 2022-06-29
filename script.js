@@ -1,14 +1,15 @@
-function Book(title, author, pages, read) {
-    this.title = title
+let myLibrary = [];
+
+class Book {
+  constructor(author, title, pages, read) {
     this.author = author
+    this.title = title
     this.pages = pages
     this.read = read
-    this.info = function() {
-       return `${title} by ${author}, ${pages} pages, ${read}`;
-    }
+  }
 }
 
-
-
-const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read yet');
-theHobbit.info()
+function addBookToLibrary() {
+  let newBook = new Book();
+  
+}
