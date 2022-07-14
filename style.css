@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+:root {
+    --card-width: 200px;
+}
+
+html {
+    font-size: 14px;
+}
+
 body {
     height: 100vh;
 }
@@ -19,9 +27,33 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    width: 200px;
+    width: var(--card-width);
     height: 250px;
     border: 1px solid black;
     margin: 5px;
     padding: 5px;
 }
+
+
+
+.book-container[data-number] {
+    position: relative;
+    justify-content: center;
+}
+
+.book-container[data-number] > #remove {
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+
+.book-container[data-number] > input:not([type="radio"]) {
+  width: calc(var(--card-width) - 20px);
+  border: none;
+  text-align: center;
+  font-size: 2em;
+  font-family: cursive;
+}
+/*
+.book-container[data-number] > #remove
+
